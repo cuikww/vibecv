@@ -1,0 +1,250 @@
+// src/utils/translations.ts
+
+export const translations = {
+  ID: {
+    // ... (biarkan yang lama tetap ada, tambahkan yang baru di bawah ini) ...
+    loginBtn: "Masuk / Login",
+    tagline: "Smart Resume Builder 🚀",
+    heroTitle1: "Buat CV Anda",
+    heroTitle2: "Lebih Cerdas.",
+    heroDesc: "Platform pembuat CV bertenaga AI yang membantu Anda menonjol di mata perekrut dan lolos sistem ATS dengan mudah.",
+    startBtn: "Mulai Sekarang - Gratis",
+    dashSubtitle: "Single source of truth untuk identitas profesional Anda.",
+    
+    // Menu Sidebar
+    menuOverview: "Overview",
+    menuProfile: "Profil Dasar",
+    menuProfileDesc: "Data diri & kontak",
+    menuEdu: "Pendidikan",
+    menuEduDesc: "Riwayat studi",
+    menuExp: "Pengalaman",
+    menuExpDesc: "Riwayat kerja & AI",
+    menuSkill: "Keahlian",
+    menuSkillDesc: "Skillset & level",
+    menuImport: "Impor LinkedIn",
+    menuImportDesc: "Ekstrak PDF otomatis",
+    menuAts: "ATS Checker",
+    menuAtsDesc: "Analisis kecocokan lowongan",
+    
+    // Teks Dashboard Premium
+    dashTitle: "Pusat Kendali CV.",
+    buildCvTitle: "Mari Bangun CV Anda",
+    buildCvDesc: "Kami akan memandu Anda selangkah demi selangkah untuk mengisi profil, pendidikan, hingga pengalaman agar CV Anda lolos seleksi ATS.",
+    startGuide: "Mulai Panduan Pengisian",
+    quickLinks: "Pintasan Cepat",
+    importData: "Impor Data LinkedIn",
+    finishedFilling: "Selesai Mengisi?",
+    previewPdf: "Preview & Cetak PDF",
+    buildBtn: "Rakit & Cetak CV Sekarang",
+    
+    // Shared / Umum
+    backToDash: "Kembali ke Dashboard",
+    loadingData: "Memuat data...",
+    savingData: "Menyimpan...",
+    saveBtn: "Simpan Data",
+    now: "Sekarang",
+
+    // Login
+    loginTitle: "Masuk dengan cepat menggunakan akun Google Anda.",
+    loginAction: "Lanjutkan dengan Google",
+    loginRedirect: "Mengalihkan...",
+
+    // Profile
+    basicInfo: "Informasi Dasar",
+    fullName: "Nama Lengkap",
+    profSummary: "Ringkasan Profesional",
+    genAi: "Generate dengan AI",
+    generating: "Membuat...",
+    phone: "Nomor Telepon",
+    linkedin: "URL LinkedIn",
+    portfolio: "URL Portofolio / Website",
+    summaryPlaceholder: "Ceritakan singkat tentang profesionalisme Anda...",
+    saveProfile: "Simpan Profil",
+    profileDesc: "Informasi ini akan diletakkan di bagian paling atas CV Anda agar mudah dihubungi oleh HRD.",
+    namePlaceholder: "Misal: John Doe",
+    publicPortfolio: "Pengaturan Portofolio Publik",
+    enablePublicLink: "Aktifkan Link Publik",
+    publicLinkDesc: "Siapa pun yang memiliki link bisa melihat CV Anda secara online.",
+    customUrl: "Custom URL (Slug)",
+    slugPlaceholder: "nama-kamu",
+    previewLink: "Pratinjau Link",
+
+    // Skills
+    skillTitle: "Keahlian Utama",
+    skillDesc: "Tambahkan teknologi atau soft skill yang ingin Anda pamerkan di CV.",
+    skillPlaceholder: "Contoh: React, Node.js, Project Management...",
+
+    // Education
+    eduTitle: "Riwayat Pendidikan",
+    addEdu: "Tambah Pendidikan",
+    instName: "Nama Institusi",
+    degree: "Gelar",
+    major: "Jurusan",
+    startMonth: "Mulai (Bulan/Tahun)",
+    endMonth: "Selesai (Kosongkan jika masih)",
+    noEdu: "Belum ada data pendidikan.",
+    contactEmail: "Email Kontak",
+    photo: "Foto Profil",
+    uploadPhoto: "Unggah Foto",
+    uploadingPhoto: "Mengunggah...",
+
+    // Experience
+    expTitle: "Riwayat Pekerjaan",
+    addExp: "Tambah Pengalaman",
+    companyName: "Nama Perusahaan",
+    jobTitle: "Jabatan",
+    expDescPlaceholder: "Deskripsi pekerjaan",
+    thinkAi: "Berpikir...",
+    saveExp: "Simpan Pengalaman",
+
+    // Generator
+    genTitle: "Generator",
+    refreshData: "Refresh Data",
+    printPdf: "Cetak ke PDF",
+    tidyingUp: "Merapikan Layout Anda...",
+    aboutMe: "Tentang Saya",
+    contact: "Kontak",
+
+    importTitle: "Impor Profil LinkedIn",
+    importDesc: "Unggah file PDF profil LinkedIn Anda. AI kami akan mengekstrak pengalaman, pendidikan, dan keahlian Anda secara otomatis.",
+    uploadBtn: "Pilih File PDF",
+    analyzingPdf: "Menganalisis PDF...",
+    previewTitle: "Pratinjau Data (Belum Disimpan)",
+    saveAllBtn: "Simpan Semua ke Profil",
+    savingAll: "Menyimpan ke Database...",
+
+    atsTitle: "Analisis ATS & Surat Lamaran",
+    atsDesc: "Tempelkan deskripsi lowongan kerja (Job Description) di bawah ini. AI kami akan menghitung skor kecocokan CV Anda, mencari kata kunci yang hilang, dan membuatkan draf Surat Lamaran otomatis.",
+    jobDescPlaceholder: "Tempelkan deskripsi pekerjaan di sini (Kualifikasi, Tanggung Jawab, dll)...",
+    analyzeBtn: "Analisis Sekarang",
+    analyzing: "Menganalisis kecocokan CV Anda...",
+    matchScore: "Skor Kecocokan",
+    missingKeywords: "Kata Kunci yang Kurang",
+    coverLetter: "Draf Surat Lamaran (Cover Letter)",
+    copyBtn: "Salin Teks",
+    copiedBtn: "Tersalin!",
+  },
+  EN: {
+    // ... (biarkan yang lama tetap ada, tambahkan yang baru di bawah ini) ...
+    loginBtn: "Sign In / Login",
+    tagline: "Smart Resume Builder 🚀",
+    heroTitle1: "Build Your Resume",
+    heroTitle2: "Smarter.",
+    heroDesc: "An AI-powered CV building platform that helps you stand out to recruiters and pass ATS systems effortlessly.",
+    startBtn: "Get Started - Free",
+    dashSubtitle: "Single source of truth for your professional identity.",
+    
+    // Menu Sidebar
+    menuOverview: "Overview",
+    menuProfile: "Basic Profile",
+    menuProfileDesc: "Personal info & contacts",
+    menuEdu: "Education",
+    menuEduDesc: "Study history",
+    menuExp: "Experience",
+    menuExpDesc: "Work history & AI",
+    menuSkill: "Skills",
+    menuSkillDesc: "Skillset & levels",
+    menuImport: "Import LinkedIn",
+    menuImportDesc: "Auto-extract PDF",
+    menuAts: "ATS Checker",
+    menuAtsDesc: "Job match analysis",
+    
+    // Teks Dashboard Premium
+    dashTitle: "CV Command Center.",
+    buildCvTitle: "Let's Build Your CV",
+    buildCvDesc: "We will guide you step by step to fill out your profile, education, and experience so your CV passes ATS screening.",
+    startGuide: "Start Guided Setup",
+    quickLinks: "Quick Links",
+    importData: "Import LinkedIn Data",
+    finishedFilling: "Finished Filling?",
+    previewPdf: "Preview & Print PDF",
+    buildBtn: "Build & Print CV Now",
+
+    // Shared / Umum
+    backToDash: "Back to Dashboard",
+    loadingData: "Loading data...",
+    savingData: "Saving...",
+    saveBtn: "Save Data",
+    now: "Present",
+
+    // Login
+    loginTitle: "Sign in quickly using your Google account.",
+    loginAction: "Continue with Google",
+    loginRedirect: "Redirecting...",
+
+    // Profile
+    basicInfo: "Basic Information",
+    fullName: "Full Name",
+    profSummary: "Professional Summary",
+    genAi: "Generate with AI",
+    generating: "Generating...",
+    phone: "Phone Number",
+    linkedin: "LinkedIn URL",
+    portfolio: "Portfolio / Website URL",
+    summaryPlaceholder: "Briefly tell us about your professionalism...",
+    saveProfile: "Save Profile",
+    profileDesc: "This information will be placed at the top of your CV so recruiters can easily contact you.",
+    namePlaceholder: "E.g., John Doe",
+    publicPortfolio: "Public Portfolio Settings",
+    enablePublicLink: "Enable Public Link",
+    publicLinkDesc: "Anyone with the link can view your CV online.",
+    customUrl: "Custom URL (Slug)",
+    slugPlaceholder: "your-name",
+    previewLink: "Preview Link",
+    contactEmail: "Contact Email",
+    photo: "Profile Photo",
+    uploadPhoto: "Upload Photo",
+    uploadingPhoto: "Uploading...",
+
+    // Skills
+    skillTitle: "Core Skills",
+    skillDesc: "Add technologies or soft skills you want to showcase on your CV.",
+    skillPlaceholder: "Example: React, Node.js, Project Management...",
+
+    // Education
+    eduTitle: "Education History",
+    addEdu: "Add Education",
+    instName: "Institution Name",
+    degree: "Degree",
+    major: "Major",
+    startMonth: "Start (Month/Year)",
+    endMonth: "End (Leave blank if present)",
+    noEdu: "No education data yet.",
+
+    // Experience
+    expTitle: "Work Experience",
+    addExp: "Add Experience",
+    companyName: "Company Name",
+    jobTitle: "Job Title",
+    expDescPlaceholder: "Job description",
+    thinkAi: "Thinking...",
+    saveExp: "Save Experience",
+
+    // Generator
+    genTitle: "Generator",
+    refreshData: "Refresh Data",
+    printPdf: "Print to PDF",
+    tidyingUp: "Tidying Up Your Layout...",
+    aboutMe: "About Me",
+    contact: "Contact",
+
+    importTitle: "Import LinkedIn Profile",
+    importDesc: "Upload your LinkedIn profile PDF. Our AI will automatically extract your experience, education, and skills.",
+    uploadBtn: "Choose PDF File",
+    analyzingPdf: "Analyzing PDF...",
+    previewTitle: "Data Preview (Not Saved Yet)",
+    saveAllBtn: "Save All to Profile",
+    savingAll: "Saving to Database...",
+
+    atsTitle: "ATS Analysis & Cover Letter",
+    atsDesc: "Paste the Job Description below. Our AI will calculate your CV match score, find missing keywords, and auto-generate a drafted Cover Letter.",
+    jobDescPlaceholder: "Paste the job description here (Qualifications, Responsibilities, etc)...",
+    analyzeBtn: "Analyze Now",
+    analyzing: "Analyzing your CV match...",
+    matchScore: "Match Score",
+    missingKeywords: "Missing Keywords",
+    coverLetter: "Cover Letter Draft",
+    copyBtn: "Copy Text",
+    copiedBtn: "Copied!",
+  }
+};

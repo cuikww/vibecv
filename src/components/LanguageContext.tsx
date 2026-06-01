@@ -3,18 +3,25 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
+// 1. TAMBAHKAN TIPE DATANYA DI SINI
 type LanguageContextType = {
   language: string;
   setLanguage: (lang: string) => void;
+  isLoadingLanguage: boolean; 
 };
 
+// 2. BERIKAN NILAI BAWAANNYA
 const LanguageContext = createContext<LanguageContextType>({
   language: 'ID',
   setLanguage: () => {},
+  isLoadingLanguage: true, // Nilai default saat pertama kali render
 });
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
   const [language, setLanguage] = useState('ID');
+  
+  // 3. BUAT STATE UNTUK LOADING
+  const [isLoadingLanguage, setIsLoadingLanguage] = useState(true);
 
   useEffect(() => {
     // 1. Cek dari penyimpanan lokal browser dulu agar responsif
@@ -38,6 +45,9 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
       } catch (error) {
         // Abaikan secara diam-diam jika fetch gagal (misal: user belum login / sedang di landing page)
         console.log("Menjalankan mode pengunjung (Guest Mode).");
+      } finally {
+        // 4. MATIKAN LOADING SETELAH PROSES SELESAI (Berhasil atau Gagal)
+        setIsLoadingLanguage(false);
       }
     };
 
@@ -50,7 +60,8 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage }}>
+    // 5. JANGAN LUPA MELEMPARKAN isLoadingLanguage KE DALAM PROVIDER
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, isLoadingLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

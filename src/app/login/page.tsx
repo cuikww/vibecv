@@ -5,7 +5,8 @@ import { createClient } from '@/utils/supabase/client';
 import { useState } from 'react';
 import { useLanguage } from '@/components/LanguageContext';
 import { translations } from '@/utils/translations';
-import { Loader2, Layers } from 'lucide-react'; 
+import { Loader2 } from 'lucide-react'; // FIX: Hapus Image dari sini
+import Image from 'next/image'; // FIX: Impor Image dari next/image
 
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,8 +34,17 @@ export default function LoginPage() {
 
       <div className="w-full max-w-md space-y-8 rounded-2xl bg-white p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-zinc-100 z-10 animate-slide-up">
         <div className="text-center mb-8 flex flex-col items-center">
-          <Layers className="text-brand-600 w-12 h-12 mb-4" />
-          <h2 className="text-4xl font-black text-zinc-900 tracking-tight">Vibe<span className="text-brand-600">CV.</span></h2>
+          <div className="font-extrabold text-xl tracking-tight text-zinc-900 flex items-center gap-2">
+            <Image 
+              src="/logo.png" // FIX: Menggunakan absolute path ke folder public
+              alt="VibeCV Logo" 
+              width={28} 
+              height={28} 
+              className="object-contain"
+              priority 
+            /> 
+            VibeCV
+          </div>
           <p className="mt-3 text-sm text-zinc-500 font-medium">{t.loginTitle}</p>
         </div>
         

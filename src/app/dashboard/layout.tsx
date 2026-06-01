@@ -8,6 +8,7 @@ import { Layers, LayoutDashboard, User, Briefcase, GraduationCap, Zap, Upload, T
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { useLanguage } from '@/components/LanguageContext';
 import { translations } from '@/utils/translations';
+import Image from 'next/image';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -29,7 +30,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <aside className="w-72 bg-white border-r border-zinc-200/60 hidden lg:flex flex-col sticky top-0 h-screen animate-fade-in">
         <div className="p-6 border-b border-zinc-100 flex justify-between items-center">
           <div className="font-extrabold text-2xl tracking-tight text-zinc-900 flex items-center gap-2">
-            <Layers className="text-indigo-600 w-6 h-6" /> VibeCV
+                        <Image 
+                          src="/logo.png" // FIX: Menggunakan absolute path ke folder public
+                          alt="VibeCV Logo" 
+                          width={28} 
+                          height={28} 
+                          className="object-contain"
+                          priority 
+                        /> 
+                        VibeCV
           </div>
         </div>
 

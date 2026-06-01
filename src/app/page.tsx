@@ -2,7 +2,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Layers, ArrowRight } from 'lucide-react';
+import Image from 'next/image'; // 1. Import komponen Image Next.js
+import { ArrowRight } from 'lucide-react'; // Bersihkan 'Layers' karena sudah tidak dipakai
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { useLanguage } from '@/components/LanguageContext';
 import { translations } from '@/utils/translations';
@@ -19,7 +20,15 @@ export default function Home() {
       {/* Floating Navbar */}
       <nav className="max-w-5xl mx-auto w-full bg-white/70 backdrop-blur-md border border-zinc-200/60 rounded-full px-6 py-3 flex justify-between items-center shadow-sm z-50 animate-fade-in">
         <div className="font-extrabold text-xl tracking-tight text-zinc-900 flex items-center gap-2">
-          <Layers className="text-indigo-600 w-6 h-6" /> VibeCV
+            <Image 
+              src="/logo.png" // FIX: Menggunakan absolute path ke folder public
+              alt="VibeCV Logo" 
+              width={28} 
+              height={28} 
+              className="object-contain"
+              priority 
+            /> 
+            VibeCV
         </div>
         
         <div className="flex items-center gap-4">

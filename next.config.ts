@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // <-- WAJIB TAMBAHKAN INI
+  // Kosongkan atau biarkan pengaturan bawaan Next.js lainnya
 };
 
 export default nextConfig;

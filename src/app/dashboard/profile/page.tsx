@@ -322,11 +322,11 @@ export default function ProfilePage() {
           </div>
 
           {/* Action Area */}
-          <div className="pt-6 border-t border-zinc-100 flex justify-end">
+          <div className="pt-6 border-t border-zinc-100 flex flex-col md:flex-row justify-end gap-3">
             <button 
               type="submit" 
               disabled={isLoading} 
-              className="w-full md:w-auto px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-zinc-900 shadow-[0_4px_14px_0_rgb(0,0,0,0.15)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 disabled:opacity-50 disabled:hover:translate-y-0 transition-all flex justify-center items-center gap-2"
+              className="w-full md:w-auto px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-zinc-900 shadow-[0_4px_14px_0_rgb(0,0,0,0.15)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 disabled:opacity-50 transition-all flex justify-center items-center gap-2"
             >
               {isLoading ? (
                 <><Loader2 size={16} className="animate-spin" /> {t.savingData}</>
@@ -334,6 +334,13 @@ export default function ProfilePage() {
                 <>{t.saveProfile}</>
               )}
             </button>
+            {/* TOMBOL SELANJUTNYA */}
+            <Link 
+              href="/dashboard/education" 
+              className="w-full md:w-auto px-8 py-3.5 rounded-xl font-bold text-sm text-indigo-700 bg-indigo-50 border border-indigo-100 hover:bg-indigo-100 transition-all flex justify-center items-center gap-2"
+            >
+              {language === 'EN' ? 'Next: Education' : 'Selanjutnya: Pendidikan'} <ArrowRight size={16} />
+            </Link>
           </div>
         </form>
       </div>

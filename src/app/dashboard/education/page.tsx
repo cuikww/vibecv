@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { GraduationCap, Calendar, Trash2, Pencil, Plus, ArrowLeft, X, Loader2 } from 'lucide-react';
+import { GraduationCap, Calendar, Trash2, Pencil, Plus, ArrowLeft,ArrowRight, X, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { useLanguage } from '@/components/LanguageContext';
 import { translations } from '@/utils/translations';
@@ -106,12 +106,18 @@ export default function EducationPage() {
 
   return (
     <div className="max-w-5xl mx-auto opacity-0 animate-slide-up delay-100 pb-12">
-      <div className="mb-8">
-        <Link href="/dashboard" className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-400 hover:text-zinc-900 mb-6 transition-colors group">
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> {t.backToDash}
+      <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <Link href="/dashboard/profile" className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-400 hover:text-zinc-900 mb-4 transition-colors group">
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> {language === 'EN' ? 'Back to Profile' : 'Kembali ke Profil'}
+          </Link>
+          <h1 className="text-3xl font-black text-zinc-900 tracking-tight mb-2">{t.eduTitle}</h1>
+          <p className="text-zinc-500 font-medium text-sm">Tambahkan riwayat akademik Anda untuk memperkuat kualifikasi profesional.</p>
+        </div>
+        
+        <Link href="/dashboard/experience" className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-bold text-sm shadow-[0_4px_14px_0_rgb(99,102,241,0.39)] hover:bg-indigo-700 hover:-translate-y-0.5 transition-all flex items-center gap-2 w-full md:w-auto justify-center">
+          {language === 'EN' ? 'Next: Experience' : 'Selanjutnya: Pengalaman'} <ArrowRight size={16} />
         </Link>
-        <h1 className="text-3xl font-black text-zinc-900 tracking-tight mb-2">{t.eduTitle}</h1>
-        <p className="text-zinc-500 font-medium text-sm">Tambahkan riwayat akademik Anda untuk memperkuat kualifikasi profesional.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
